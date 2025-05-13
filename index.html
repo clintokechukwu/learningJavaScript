@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Background Toggle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>JavaScript Practice</h1></header>
+  <br>
+  <br>
+
+  
+  <!-- Dark/ Light Mode Toggle -->
+  <button class="btn" id="toggleBtn">Toggle Background</button>
+  <h2>Welcome to My Page</h2>
+
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Increase/Decrease Button -->
+  <button class="btn" id="btnIncrease">&uarr;</button> 
+  <h2 id="btnNumber">0</h2>
+  <button class="btn" id="btnDecrease">&darr;</button><br><br>
+  <button class="btn" id="btnReset">Reset</button>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Simple Tip Calculator -->
+  <label for="inputBill">Enter Bill Amount:</label>
+  <input type="number" id="inputBill" placeholder="Enter Bill Amount..."></input><button id="btnSaveValue">Save</button>
+  <div id="tip-container">
+    <p>Tip:</p> <button class="btnTipPercent" value="0.05" id="tip-percent-0">5%</button> <button class="btnTipPercent" value="0.10" id="tip-percent-1">10%</button> <button class="btnTipPercent" value="0.15" id="tip-percent-2">15%</button><br><br>
+    <button id="btnCalculate">Calculate</button>
+  </div>
+  <p>Total Tip:</p><p id="totalTip">0</p>
+  <p>Total Amount:</p><p id="totalAmount">0</p>
+
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Password Strength Checker -->
+  <label for="passwordInput">Enter Password:</label>
+  <input type="password" id="passwordInput" placeholder="Type password..." name="passwordInput">
+  <button id="toggleVisibility">Show</button> 
+  <p id="strengthMessage">Strength: </p>
+  
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Login Form -->
+  <div>
+    <h3 id="h3Login">Login Form</h3>
+    <form id="loginForm"> 
+      <label for="usernameInput1">Username:</label>
+      <input type="text" id="usernameInput1" placeholder="username..."> <br><br>
+      <label for="passwordInput1">Password:</label>
+      <input type="password" id="passwordInput1" placeholder="password...">
+      <button id="toggleVisibility1">Show</button> <br><br>
+      <textarea id="loginText" placeholder="Feedback:"></textarea>
+      <button id="btnLogin">Login</button>
+    </form>
+    <div id="logoutContainer">
+      <button class="hidden" id="btnLogout">Logout</button>
+      <p class="hidden">Profile View:</p>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Live Character Counter -->
+  <div id="counterContainer">
+    <h3>Character Counter</h3>
+    <span class="counters" id="characterCounter">0</span><p class="counters" id="maxCounter">/0</p>
+    <textarea id="characterInput" for="characterInput"></textarea>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Light Switch / Simple Color Picker -->
+  <h3>Light-Bulb</h3>
+  <label>Pick a Color:</label>
+  <input type="color" id="colorPicker"><br>
+  <br><div id="lightBulb"></div><button id="lightSwitch">On</button>
+
+  <br>
+  <br>
+  <br>
+
+
+  <!-- Random Quote Generator -->
+  <h3>Random Quote Generator</h3>
+  <p id="quoteDisplay"></p>
+  <button id="generateQuote">Generate!</button>
+
+  <br>
+  <br>
+  <br>
+
+
+  <!-- 🥤 Drink Order Builder -->
+  <h3>🥤 Drink Order Builder</h3>
+  <label for="nameInput">Enter Name:</label>
+  <input type="name" id="nameInput">
+  <label for="drinksSelect">Select Drink:</label>
+  <select name="drinks" id="drinksSelect">
+    <option disabled selected>Select an option</option>
+    <option value="Coffee">Coffee</option>
+    <option value="Smoothie">Smoothie</option>
+    <option value="Soda">Soda</option>
+  </select>
+
+  <div class="hidden" id="coffeeOptions"> <!--coffee options -->
+    <h4>Customize:</h4>
+    <label for="milk">Milk</label>
+    <input type="checkbox" id="milk" class="coffeeOptions-class" value="Milk">
+    <label for="sugar">Sugar</label>
+    <input type="checkbox" id="sugar" class="coffeeOptions-class" value="Sugar">
+    <label for="creamer">Creamer</label>
+    <input type="checkbox" id="creamer" class="coffeeOptions-class" value="Creamer">  
+    <label for="ice">Ice</label>
+    <input type="checkbox" id="ice" class="coffeeOptions-class" value="Ice">  
+  </div>
+
+  <div class="hidden" id="sodaOptions"> <!--soda options -->
+    <h4>Customize:</h4>
+    <input type="radio" name="soda" class="sodaOptions-class" id="sprite" value="Sprite">
+    <label for="sprite">Sprite</label>
+    <input type="radio" name="soda" class="sodaOptions-class" id="fanta" value="Fanta">
+    <label for="fanta">Fanta</label>
+    <input type="radio" name="soda" class="sodaOptions-class" id="pepsi" value="Pepsi"> 
+    <label for="pepsi">Pepsi</label>
+    <input type="radio" name="soda" class="sodaOptions-class" id="ginger-ale" value="Ginger Ale"> 
+    <label for="ginger-ale">Ginger Ale</label>
+  </div>
+  
+  <div class="hidden" id="smoothieOptions"> <!--smoothie options -->
+    <h4>Customize:</h4>
+    <label for="strawberry">Strawberry</label>
+    <input type="checkbox" id="strawberry" class="smoothieOptions-class" value="Strawberry">
+    <label for="kiwi">Kiwi</label>
+    <input type="checkbox" id="kiwi" class="smoothieOptions-class" value="Kiwi">
+    <label for="blueberry">Blueberry</label>
+    <input type="checkbox" id="blueberry" class="smoothieOptions-class" value="Blueberry">  
+    <label for="banana">Banana</label>
+    <input type="checkbox" id="banana" class="smoothieOptions-class" value="Banana">  
+  </div>
+
+
+  <div id="submitOptions"> <!--submit options -->
+    <br>
+    <button type="submit" id="submitDrink">Submit</button>
+  </div>
+  
+  <div class="hidden" id="drinkReceipt">
+    <h4>Receipt</h4>
+    <p>Name:<span id="nameValue"></span></p>
+    <p>Drink:<span id="drinkValue"></span></p>
+    <p>Thanks For Shopping!</p>
+  </div>
+
+  <button id="resetOrder" class="hidden">Order Again</button> <!-- reset form -->
+
+
+
+  
+  <script src="script.js">
+    // Your JavaScript goes here!
+    //const button = document.getElementById('toggleBtn');
+    
+    // Add event listener to handle click
+    //button.addEventListener('click', function() {
+      // Your logic to change background color and button text
+    //});
+  </script>
+
+</body>
+</html>

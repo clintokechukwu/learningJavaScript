@@ -1,0 +1,59 @@
+.selected {
+  background-color:rgb(242, 159, 241);
+}
+body {
+  transition: background-color 0.3s ease;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  border-radius: 5px;
+}
+
+form {
+  z-index: 1;
+}
+#logoutContainer {
+  position: absolute;
+  top: 1250px;
+  left: 325px;
+  z-index: 2;
+}
+
+.hidden{
+  display: none;
+}
+
+.counters {
+  display: inline;
+}
+
+#lightBulb {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  margin-left: 334px;
+  border-radius: 50px;
+  background-color: rgb(225, 225, 225);
+}
+.turnOn {
+  background-color: yellow;
+}
+
+.fade-in {
+  transition: opacity 250ms ease-in; 
+}
