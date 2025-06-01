@@ -608,6 +608,106 @@ resetOrder.addEventListener('click', function() {
 });
 
 
+/////////////
+// practicing Array Destructuring, Object Destructuring,  Spread Operators, Rest Pattern & Parameters, Short-Circuiting (|| and &&), Logical Assignment Operators (||=, &&=, ??=)
+
+// mini drink order system practice 1
+const drinksMenu = ['Latte', 'Espresso', 'Matcha', 'Chai'];
+const extraOptions = ['Oat Milk', 'Vanilla Syrup', 'Ice'];
+
+const customer1 = {
+  name: 'Alex',
+  drink: 'Matcha',
+  milk: undefined,
+  sweetener: null,
+  extras: ['Ice'],
+};
+const customer2 = {
+  name: 'Alex',
+  drink: '',
+  milk: undefined,
+  sweetener: null,
+  extras: ['Ice', 'Vanilla Syrup'],
+};
+// Tasks 
+// 1.	Destructure the first and third drinks from drinksMenu into firstDrink and thirdDrink.
+// 	2.	Spread drinksMenu and extraOptions into a new array called fullMenu.
+// 	3.	Use the rest operator to collect all drinks except the first one into a variable called otherDrinks.
+// 	4.	Use short-circuiting to set a default drink for a customer2 object, who didn’t choose a drink.
+// 	5.	Use logical assignment operators (??=, ||=) to assign default values to milk and sweetener in customer1.
+
+// 1.
+const [firstDrink, , thirdDrink] = drinksMenu;
+console.log(firstDrink, thirdDrink);
+
+// 2. 
+const fullMenu = [...drinksMenu, ...extraOptions];
+console.log(fullMenu);
+
+// 3. 
+const [, ...otherDrinks] = drinksMenu;
+console.log(otherDrinks);
+
+// 4. 
+customer2.drink || console.log('Please select a drink');
+customer2.drink ||= 'Default Drink';
+console.log(customer2);
+console.log(customer1);
+
+// 5. 
+customer1.milk ??= 'Oat Milk';
+customer1.sweetener ??= 'Honey';
+console.log(customer2);
+console.log(customer1);
+
+
+// mini drink order system practice 2
+const juiceMenu = ['Orange', 'Mango', 'Pineapple', 'Berry Blast'];
+const toppings = ['Chia Seeds', 'Protein Powder', 'Mint Leaves'];
+
+const customer3 = {
+  name: 'Jamie',
+  juice: null,
+  ice: false,
+  extras: ['Mint Leaves'],
+};
+
+const customer4 = {
+  name: 'Taylor',
+  juice: '',
+  ice: undefined,
+  extras: [],
+};
+// Tasks - 
+// 1.	Destructure the second and fourth juice from juiceMenu into variables called favoriteJuice and specialJuice.
+// 	2.	Spread juiceMenu and toppings into a new array called fullJuiceBarMenu.
+// 	3.	Use the rest operator to store all toppings except the first one in customToppings.
+// 	4.	Use short-circuiting to assign 'Berry Blast' to customer4.juice if no juice is selected.
+// 	5.	Use logical assignment operators to:
+// 	•	Assign 'with Ice' if ice is undefined or null
+// 	•	Assign 'Chia Seeds' to extras if it’s an empty array
+
+// 1. 
+const [, favoriteJuice, , specialJuice] = juiceMenu;
+console.log(favoriteJuice, specialJuice);
+
+// 2. 
+const fullJuiceBarMenu = [...juiceMenu, ...toppings];
+console.log(fullJuiceBarMenu);
+
+// 3. 
+const [, ...customToppings] = toppings;
+console.log(customToppings);
+
+// 4. 
+customer4.juice = customer4.juice || 'Berry Blast';
+console.log(customer4);
+
+// 5. 
+customer4.ice ??= 'with ice';
+customer4.extras &&= 'Chia Seeds';
+console.log(customer3);
+console.log(customer4);
 
 
 
